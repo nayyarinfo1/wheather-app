@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Weather App</title>
+	<link rel="stylesheet" type="text/css" href="weather.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-[url('./images/bg.jpg')]">
+
+<div>
+	<div class="grid sm:grid-cols-12 gap-2 max-w-[1200px] w-full mx-auto mt-10 ">
+		<!-- first column -->
+		<div class="col-span-3 row-span-60 bg-black text-gray-200  border-2 border-white rounded-lg  min-h-[100px]">
+			
+			<p class="font-serif text-center mt-6 text-gray-200" id="demo"></p>
+			<input id="search-input" class="border-white  mt-3 border-2 rounded-lg ml-20 sm:ml-11 px-2" type="text" name="" placeholder="Please Enter City Name">
+				<button id="search-btn" class="cursor-pointer rounded-lg m-1"><i class="fa-solid fa-lg fa-magnifying-glass"></i></button>
+				<h1 id="city-name" class="text-center mt-2 text-3xl font-bold">Peshawar</h1>
+				<div class="sm:mx-9 mx-18 mt-4 w-54 h-35 border-2 rounded-lg">
+					<h1 class="text-center mt-2 text-xl font-bold">Temperature</h1>
+					<p id="temp" class="text-center mt-2 text-6xl font-bold text-yellow-400" id="temp">°C</p>
+				</div>
+				<div class="sm:mx-9 mx-18 mt-3 w-54 h-35 border-2 rounded-lg">
+					<h1 class="text-center mt-2 text-xl font-bold">Country</h1>
+					<p class="text-center mt-5 text-5xl font-bold text-yellow-400" id="country-name">🌏</p>
+				</div>
+		</div>
+		<!-- first col end -->
+
+		
+		<!-- second col start -->
+		<div class="col-span-3 row-span-50  text-black border-2 rounded-lg min-h-[100px] bg-black text-yellow-300 border-white">
+			<h1 class="text-center mt-2 text-3xl font-bold text-gray-200 ">Feels Like</h1>
+				<img id="w5" class=" mt-12 w-35 h-35 sm:ml-15 ml-24 hover: animate-pulse cursor-pointer " src="./images/dd.png" alt="">
+				<p class="text-center mt-9 text-6xl font-bold text-yellow-400" id="feels-like">°C</p>
+		</div>
+		<!-- second col end -->
+
+
+		<!-- third col star -->
+		<div class="col-span-3 row-span-50   text-black border-2 rounded-lg min-h-[100px] bg-black text-yellow-300 border-white">
+			<h1 class="text-center mt-2 text-3xl font-bold text-gray-200">Temp Max</h1>
+				<img class="mt-6 w-40 h-40 sm:ml-15 ml-24  animate-pulse cursor-pointer " src="./images/weather5.png" alt="">
+				<p class="text-center mt-9 text-6xl font-bold text-yellow-400" id="temp-max">°C</p>
+		</div>
+		<!-- third col end -->
+
+
+		<!-- fourth col start -->
+		<div class="col-span-3 row-span-50   text-black border-2 rounded-lg min-h-[100px] bg-black text-yellow-300 border-white">
+		<h1 class="text-center mt-2 text-3xl font-bold text-gray-200">Temp Min</h1>
+				<img class="mt-6 w-40 h-40 sm:ml-15 ml-24 animate-pulse cursor-pointer " src="./images/weather1.png" alt="">
+				<p class="text-center mt-9 text-6xl font-bold text-yellow-400" id="temp-min">°C</p>
+		</div>
+		 <!-- fourth col end -->
+
+
+		<!-- fifth col start -->
+		<div class="col-span-3 row-span-10 gap-2  border-2 rounded-lg min-h-[100px] bg-black text-yellow-300 border-white">
+			<h1  class="text-center mt-2 text-2xl font-bold text-gray-200">Humidity</h1>
+			<p class="text-center mt-1 text-3xl font-bold text-yellow-400" id="humidity">m/s</p>
+			</div>
+			<!-- fifth col end -->
+
+
+			<!-- sixth col start -->
+			<div class="col-span-3 row-span-10 gap-2  border-2 rounded-lg min-h-[100px] bg-black text-yellow-300 border-white">
+			<h1 class="text-center mt-2 text-2xl font-bold text-gray-200">Pressure</h1>
+			<p class="text-center mt-1 text-3xl font-bold text-yellow-400" id="pressure">hpa</p>
+
+			</div>
+			<!-- sixth col end -->
+
+
+			<!-- seventh col start -->
+			<div class="col-span-3 row-span-10 gap-2  border-2 rounded-lg min-h-[100px] bg-black text-yellow-300 border-white">
+			<h1 class="text-center mt-2 text-2xl font-bold text-gray-200">Wind Speed</h1>
+			<p class="text-center mt-1 text-3xl font-bold text-yellow-400" id="wind-speed">g/m³</p>
+
+			</div>
+			<!-- seventh col end -->
+	</div>
+</div>
+
+	<script src="weather.js"></script>
+</body>
+</html>
